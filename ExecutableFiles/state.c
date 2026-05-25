@@ -2,15 +2,18 @@
 #include <math.h>
 #include "state.h"
 
-int is_final_state(State* state, int target_x, int target_y) {
+int is_final_state(State* state, int target_x, int target_y) 
+{
     return (state->x == target_x && state->y == target_y);
 }
 
-int manhattan_distance(int x, int y, int target_x, int target_y) {
+int manhattan_distance(int x, int y, int target_x, int target_y) 
+{
     return abs(x - target_x) + abs(y - target_y);
 }
 
-State* transition(State* current, int action, int maze[MAX_N][MAX_N], int N, int target_x, int target_y) {
+State* transition(State* current, int action, int maze[MAX_N][MAX_N], int N, int target_x, int target_y) 
+{
     int nx = current->x, ny = current->y;
     if (action == 1) nx--;
     else if (action == 2) nx++;

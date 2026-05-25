@@ -6,13 +6,13 @@
 #include "search.h"
 
 int main() {
-    srand(time(NULL));
     int maze[MAX_N][MAX_N];
 
     int N, difficulty, start_x, start_y, target_x, target_y;
 
     printf("Ingrese el tamaño del laberinto (maximo 50): \n");
     scanf("%d", &N);
+    
     if (N > MAX_N) N = MAX_N;
 
     printf("Ingrese la dificultad (0-100): ");
@@ -20,6 +20,7 @@ int main() {
 
     printf("Ingrese coordenada X de INICIO (0 a %d): ", N - 1);
     scanf("%d", &start_x);
+    
     printf("Ingrese coordenada Y de INICIO (0 a %d): ", N - 1);
     scanf("%d", &start_y);
 

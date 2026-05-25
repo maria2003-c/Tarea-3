@@ -4,7 +4,8 @@
 #include "maze.h"
 #include "state.h"
 
-static void build_safe_path(int x, int y, int target_x, int target_y, int safe[MAX_N][MAX_N], int visited[MAX_N][MAX_N], int N) {
+static void build_safe_path(int x, int y, int target_x, int target_y, int safe[MAX_N][MAX_N], int visited[MAX_N][MAX_N], int N) 
+{
     safe[x][y] = 1; visited[x][y] = 1;
     if (x == target_x && y == target_y) return;
 
